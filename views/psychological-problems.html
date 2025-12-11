@@ -1,0 +1,181 @@
+<div class="service-page psychological-problems">
+    <!-- Hero Section -->
+    <section class="service-hero section">
+        <div class="container">
+            <div class="service-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{serviceData.title}}</h1>
+                <p class="hero-subtitle">{{serviceData.hero}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="service-main-content">
+                <div class="service-image" fade-in-on-scroll>
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Mental Health Professional Treatment" 
+                         class="floating">
+                </div>
+                <div class="service-text" fade-in-on-scroll>
+                    <h2>Understanding Psychological Problems</h2>
+                    <p class="service-description">{{serviceData.description}}</p>
+                    <div class="service-content">
+                        <p ng-repeat="paragraph in serviceData.content">{{paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Conditions -->
+    <section class="section conditions-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Common Psychological Conditions</h2>
+            <div class="conditions-grid grid grid-2">
+                <div class="condition-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="condition-icon">🔄</div>
+                    <h3>Obsessive-Compulsive Disorder (OCD)</h3>
+                    <p>Intrusive thoughts and compulsive behaviors that interfere with daily functioning.</p>
+                    <ul>
+                        <li>Repetitive thoughts or worries</li>
+                        <li>Compulsive behaviors or rituals</li>
+                        <li>Anxiety when rituals are prevented</li>
+                        <li>Time-consuming symptoms</li>
+                    </ul>
+                </div>
+                <div class="condition-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="condition-icon">⚖️</div>
+                    <h3>Bipolar Disorder</h3>
+                    <p>Extreme mood swings between manic highs and depressive lows.</p>
+                    <ul>
+                        <li>Alternating mood episodes</li>
+                        <li>Changes in energy levels</li>
+                        <li>Impaired judgment during episodes</li>
+                        <li>Impact on relationships and work</li>
+                    </ul>
+                </div>
+                <div class="condition-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="condition-icon">🎭</div>
+                    <h3>Personality Disorders</h3>
+                    <p>Persistent patterns of thinking and behavior that cause distress or impairment.</p>
+                    <ul>
+                        <li>Difficulty in relationships</li>
+                        <li>Distorted thinking patterns</li>
+                        <li>Emotional dysregulation</li>
+                        <li>Impaired social functioning</li>
+                    </ul>
+                </div>
+                <div class="condition-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="condition-icon">🧠</div>
+                    <h3>Attention Deficit Disorders</h3>
+                    <p>Difficulties with attention, hyperactivity, and impulse control.</p>
+                    <ul>
+                        <li>Difficulty concentrating</li>
+                        <li>Hyperactivity and restlessness</li>
+                        <li>Impulsive decision-making</li>
+                        <li>Problems with organization</li>
+                    </ul>
+                </div>
+                <div class="condition-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="condition-icon">🌙</div>
+                    <h3>Sleep Disorders</h3>
+                    <p>Problems with sleep quality, timing, or duration affecting daily life.</p>
+                    <ul>
+                        <li>Insomnia or hypersomnia</li>
+                        <li>Sleep-wake cycle disruptions</li>
+                        <li>Daytime fatigue and impairment</li>
+                        <li>Associated mood changes</li>
+                    </ul>
+                </div>
+                <div class="condition-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="condition-icon">🍭</div>
+                    <h3>Eating Disorders</h3>
+                    <p>Serious disturbances in eating behaviors and related thoughts and emotions.</p>
+                    <ul>
+                        <li>Distorted body image</li>
+                        <li>Restrictive or binge eating</li>
+                        <li>Preoccupation with weight</li>
+                        <li>Physical health complications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Philosophy -->
+    <section class="section philosophy-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Treatment Philosophy</h2>
+            <div class="philosophy-content">
+                <div class="philosophy-item" fade-in-on-scroll>
+                    <div class="philosophy-icon">🤝</div>
+                    <h3>Collaborative Approach</h3>
+                    <p>Working together as partners in your healing journey, respecting your unique experiences and perspectives.</p>
+                </div>
+                <div class="philosophy-item" fade-in-on-scroll>
+                    <div class="philosophy-icon">🌱</div>
+                    <h3>Holistic Treatment</h3>
+                    <p>Addressing the whole person - mind, body, and spirit - for comprehensive healing and recovery.</p>
+                </div>
+                <div class="philosophy-item" fade-in-on-scroll>
+                    <div class="philosophy-icon">🎯</div>
+                    <h3>Evidence-Based Methods</h3>
+                    <p>Using scientifically proven therapeutic techniques tailored to your specific condition and needs.</p>
+                </div>
+                <div class="philosophy-item" fade-in-on-scroll>
+                    <div class="philosophy-icon">🔒</div>
+                    <h3>Confidential & Safe</h3>
+                    <p>Providing a secure, non-judgmental environment where you can explore and heal without fear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to Seek Help -->
+    <section class="section seek-help-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>When to Seek Professional Help</h2>
+            <div class="warning-signs grid grid-2">
+                <div class="warning-card card" fade-in-on-scroll>
+                    <h3>Immediate Concerns</h3>
+                    <ul>
+                        <li>Thoughts of self-harm or suicide</li>
+                        <li>Severe mood swings or psychotic symptoms</li>
+                        <li>Inability to function in daily life</li>
+                        <li>Substance abuse affecting health</li>
+                        <li>Risk of harm to others</li>
+                    </ul>
+                </div>
+                <div class="warning-card card" fade-in-on-scroll>
+                    <h3>Early Intervention Signs</h3>
+                    <ul>
+                        <li>Persistent changes in mood or behavior</li>
+                        <li>Difficulty maintaining relationships</li>
+                        <li>Declining work or academic performance</li>
+                        <li>Social withdrawal and isolation</li>
+                        <li>Unexplained physical symptoms</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help-message" fade-in-on-scroll>
+                <p><strong>Remember:</strong> Seeking help is a sign of strength, not weakness. Early intervention can prevent conditions from worsening and improve your quality of life significantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Your Mental Health Matters</h2>
+                <p>Don't let psychological problems control your life. Professional help is available, and recovery is possible with the right support.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Schedule Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

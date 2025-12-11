@@ -1,0 +1,318 @@
+<div class="about-page">
+    <!-- Hero Section -->
+    <section class="about-hero section">
+        <div class="container">
+            <div class="about-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{pageTitle}}</h1>
+                <p class="hero-subtitle">{{aboutContent.subtitle}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="section">
+        <div class="container">
+            <div class="about-main-content">
+                <div class="about-image" fade-in-on-scroll>
+                    <img src="assets/images/parul-madam.png" 
+                         alt="Parul Khona - Professional Counsellor" 
+                         class="floating">
+                </div>
+                <div class="about-text" fade-in-on-scroll>
+                    <h2>{{aboutContent.title}}</h2>
+                    <p class="qualification">{{aboutContent.qualifications}}</p>
+                    <div class="description">
+                        <p ng-repeat="paragraph in aboutContent.description">{{paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section mission-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>My Mission</h2>
+            <div class="mission-content grid grid-3">
+                <div class="mission-card card" 
+                     ng-repeat="mission in aboutContent.mission" 
+                     fade-in-on-scroll
+                     hover-effect="lift">
+                    <div class="mission-number">{{$index + 1}}</div>
+                    <p>{{mission}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Services Section -->
+    <section class="section corporate-detailed-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Corporate Counselling Services</h2>
+            <p class="section-subtitle" fade-in-on-scroll>Comprehensive workplace mental health solutions</p>
+            
+            <div class="corporate-detailed-grid">
+                <div class="corporate-category card" fade-in-on-scroll>
+                    <h3>Workplace Harmony & Communication</h3>
+                    <ul>
+                        <li ng-repeat="service in corporateServices | limitTo:3">{{service}}</li>
+                    </ul>
+                </div>
+                <div class="corporate-category card" fade-in-on-scroll>
+                    <h3>Employee Development & Support</h3>
+                    <ul>
+                        <li ng-repeat="service in corporateServices | limitTo:3:3">{{service}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section approach-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>My Therapeutic Approach</h2>
+            <div class="approach-content grid grid-2">
+                <div class="approach-item card" fade-in-on-scroll hover-effect="lift">
+                    <div class="approach-icon">🌿</div>
+                    <h3>Holistic Healing</h3>
+                    <p>I believe in treating the whole person, not just symptoms. My approach integrates mind, body, and spirit for comprehensive healing.</p>
+                </div>
+                <div class="approach-item card" fade-in-on-scroll hover-effect="lift">
+                    <div class="approach-icon">🤝</div>
+                    <h3>Collaborative Partnership</h3>
+                    <p>Therapy is a collaborative journey. Together, we'll identify your strengths and develop personalized strategies for growth.</p>
+                </div>
+                <div class="approach-item card" fade-in-on-scroll hover-effect="lift">
+                    <div class="approach-icon">🛡️</div>
+                    <h3>Safe & Confidential</h3>
+                    <p>I provide a safe, nurturing, and confidential environment where you can explore your thoughts and feelings without judgment.</p>
+                </div>
+                <div class="approach-item card" fade-in-on-scroll hover-effect="lift">
+                    <div class="approach-icon">🎯</div>
+                    <h3>Goal-Oriented</h3>
+                    <p>We'll work together to set clear, achievable goals and develop practical tools to help you overcome challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section class="section qualifications-section">
+        <div class="container">
+            <div class="qualifications-content" fade-in-on-scroll>
+                <h2 class="section-title">Professional Qualifications & Experience</h2>
+                <div class="qualifications-grid grid grid-2">
+                    <div class="qualification-item card">
+                        <h3>Education & Credentials</h3>
+                        <ul>
+                            <li>Master's in Psychology (M.S.)</li>
+                            <li>Certified Psychotherapist</li>
+                            <li>Licensed Professional Counsellor</li>
+                            <li>Continuing Education in Latest Therapeutic Techniques</li>
+                        </ul>
+                    </div>
+                    <div class="qualification-item card">
+                        <h3>Areas of Expertise</h3>
+                        <ul>
+                            <li>Individual & Couples Therapy</li>
+                            <li>Family & Group Counselling</li>
+                            <li>Trauma & PTSD Treatment</li>
+                            <li>Corporate Mental Health Programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Ready to Begin Your Healing Journey?</h2>
+                <p>Take the first step towards positive change. Let's work together to improve your mental wellbeing.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.about-page .about-hero {
+    background: linear-gradient(135deg, 
+        var(--neutral-warm-white) 0%, 
+        rgba(93, 156, 156, 0.1) 50%, 
+        var(--neutral-cream) 100%);
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+}
+
+.about-hero-content .page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-hero-content .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.about-main-content .qualification {
+    font-weight: 600;
+    color: var(--primary-forest);
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.description p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.mission-section {
+    background: linear-gradient(45deg, var(--neutral-cream), var(--neutral-warm-white));
+}
+
+.mission-card {
+    text-align: center;
+    position: relative;
+    padding-top: var(--spacing-xxl);
+}
+
+.mission-number {
+    position: absolute;
+    top: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-sage);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.corporate-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.corporate-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.corporate-category li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--neutral-soft-gray);
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.corporate-category li:before {
+    content: "→";
+    color: var(--primary-sage);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.approach-section {
+    background: linear-gradient(135deg, 
+        rgba(156, 175, 136, 0.05) 0%, 
+        var(--neutral-warm-white) 50%, 
+        rgba(93, 156, 156, 0.05) 100%);
+}
+
+.approach-item {
+    text-align: center;
+}
+
+.approach-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.qualifications-section {
+    background: var(--neutral-cream);
+}
+
+.qualification-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.qualification-item li {
+    padding: var(--spacing-xs) 0;
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.qualification-item li:before {
+    content: "✓";
+    color: var(--primary-sage);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--secondary-teal), var(--primary-forest));
+    color: white;
+}
+
+.cta-section .section-title,
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .about-main-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-actions .btn {
+        width: 250px;
+        text-align: center;
+    }
+}
+</style>

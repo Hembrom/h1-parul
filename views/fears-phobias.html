@@ -1,0 +1,109 @@
+<div class="service-page fears-phobias">
+    <!-- Hero Section -->
+    <section class="service-hero section">
+        <div class="container">
+            <div class="service-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{serviceData.title}}</h1>
+                <p class="hero-subtitle">{{serviceData.hero}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="service-main-content">
+                <div class="service-image" fade-in-on-scroll>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Overcoming Fears and Phobias" 
+                         class="floating">
+                </div>
+                <div class="service-text" fade-in-on-scroll>
+                    <h2>Understanding Fears & Phobias</h2>
+                    <p class="service-description">{{serviceData.description}}</p>
+                    <div class="service-content">
+                        <p ng-repeat="paragraph in serviceData.content">{{paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Phobias Section -->
+    <section class="section phobias-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Common Fears & Phobias</h2>
+            <div class="phobias-grid grid grid-3">
+                <div class="phobia-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="phobia-icon">🌊</div>
+                    <h3>Water & Heights</h3>
+                    <p>Fear of water, swimming, or high places that limit daily activities.</p>
+                </div>
+                <div class="phobia-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="phobia-icon">🎤</div>
+                    <h3>Public Speaking</h3>
+                    <p>Anxiety about speaking in front of others or social situations.</p>
+                </div>
+                <div class="phobia-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="phobia-icon">🐕</div>
+                    <h3>Animals & Insects</h3>
+                    <p>Excessive fear of specific animals, insects, or wildlife.</p>
+                </div>
+                <div class="phobia-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="phobia-icon">👥</div>
+                    <h3>Social Anxiety</h3>
+                    <p>Fear of social judgment, crowded places, or social interactions.</p>
+                </div>
+                <div class="phobia-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="phobia-icon">💔</div>
+                    <h3>Intimacy & Relationships</h3>
+                    <p>Fear of emotional closeness, commitment, or vulnerability.</p>
+                </div>
+                <div class="phobia-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="phobia-icon">🌟</div>
+                    <h3>Low Self-Esteem</h3>
+                    <p>Fear of failure, inadequacy, or not being good enough.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Approach -->
+    <section class="section treatment-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Treatment Approaches</h2>
+            <div class="treatment-methods grid grid-2">
+                <div class="method-card card" fade-in-on-scroll hover-effect="lift">
+                    <h3>Gradual Exposure Therapy</h3>
+                    <p>Systematic desensitization through controlled, gradual exposure to feared situations in a safe environment.</p>
+                </div>
+                <div class="method-card card" fade-in-on-scroll hover-effect="lift">
+                    <h3>Cognitive Behavioral Therapy</h3>
+                    <p>Identifying and changing negative thought patterns that contribute to fear responses.</p>
+                </div>
+                <div class="method-card card" fade-in-on-scroll hover-effect="lift">
+                    <h3>Relaxation Techniques</h3>
+                    <p>Learning breathing exercises, mindfulness, and relaxation methods to manage anxiety.</p>
+                </div>
+                <div class="method-card card" fade-in-on-scroll hover-effect="lift">
+                    <h3>Confidence Building</h3>
+                    <p>Developing self-confidence and coping strategies to face challenges with courage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Ready to Overcome Your Fears?</h2>
+                <p>Don't let fears control your life. Take the first step towards freedom and confidence.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

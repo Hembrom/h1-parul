@@ -1,0 +1,148 @@
+<div class="service-page parent-child">
+    <!-- Hero Section -->
+    <section class="service-hero section">
+        <div class="container">
+            <div class="service-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{serviceData.title}}</h1>
+                <p class="hero-subtitle">{{serviceData.hero}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="service-main-content">
+                <div class="service-image" fade-in-on-scroll>
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Parent Child Relationship" 
+                         class="floating">
+                </div>
+                <div class="service-text" fade-in-on-scroll>
+                    <h2>Understanding Parent-Child Dynamics</h2>
+                    <p class="service-description">{{serviceData.description}}</p>
+                    <div class="service-content">
+                        <p ng-repeat="paragraph in serviceData.content">{{paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age-Specific Issues -->
+    <section class="section age-issues-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Age-Specific Challenges</h2>
+            <div class="age-groups">
+                <div class="age-group card" fade-in-on-scroll hover-effect="lift">
+                    <div class="age-icon">🍼</div>
+                    <h3>Early Childhood (0-5 years)</h3>
+                    <ul>
+                        <li>Behavioral management and discipline</li>
+                        <li>Sleep and eating difficulties</li>
+                        <li>Separation anxiety</li>
+                        <li>Developmental concerns</li>
+                    </ul>
+                </div>
+                <div class="age-group card" fade-in-on-scroll hover-effect="lift">
+                    <div class="age-icon">🎒</div>
+                    <h3>School Age (6-12 years)</h3>
+                    <ul>
+                        <li>Academic performance issues</li>
+                        <li>Social skills development</li>
+                        <li>Attention and focus problems</li>
+                        <li>Peer relationship challenges</li>
+                    </ul>
+                </div>
+                <div class="age-group card" fade-in-on-scroll hover-effect="lift">
+                    <div class="age-icon">🎓</div>
+                    <h3>Teenagers (13-18 years)</h3>
+                    <ul>
+                        <li>Identity formation and independence</li>
+                        <li>Risk-taking behaviors</li>
+                        <li>Emotional regulation</li>
+                        <li>Communication breakdowns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Issues -->
+    <section class="section common-issues-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Common Parent-Child Issues</h2>
+            <div class="issues-grid grid grid-3">
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">📱</div>
+                    <h3>Technology & Screen Time</h3>
+                    <p>Managing digital device usage, social media concerns, and online safety.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">📚</div>
+                    <h3>Academic Pressure</h3>
+                    <p>Balancing expectations, motivation, and stress related to school performance.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">😤</div>
+                    <h3>Behavioral Problems</h3>
+                    <p>Addressing defiance, aggression, and challenging behaviors effectively.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">👥</div>
+                    <h3>Peer Pressure</h3>
+                    <p>Helping children navigate social pressures and make good decisions.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">💬</div>
+                    <h3>Communication Gap</h3>
+                    <p>Building open, honest communication between parents and children.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">🌱</div>
+                    <h3>Self-Esteem Issues</h3>
+                    <p>Supporting healthy self-image and confidence development in children.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parenting Strategies -->
+    <section class="section strategies-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Effective Parenting Strategies</h2>
+            <div class="strategies-content">
+                <div class="strategy-item" fade-in-on-scroll>
+                    <h3>Positive Discipline Techniques</h3>
+                    <p>Learn age-appropriate discipline methods that teach rather than punish, fostering respect and understanding.</p>
+                </div>
+                <div class="strategy-item" fade-in-on-scroll>
+                    <h3>Active Listening Skills</h3>
+                    <p>Develop skills to truly hear and understand your child's perspective, creating deeper emotional connections.</p>
+                </div>
+                <div class="strategy-item" fade-in-on-scroll>
+                    <h3>Setting Healthy Boundaries</h3>
+                    <p>Establish clear, consistent boundaries that provide security while allowing appropriate independence.</p>
+                </div>
+                <div class="strategy-item" fade-in-on-scroll>
+                    <h3>Emotional Intelligence Development</h3>
+                    <p>Help your child understand and manage emotions, building resilience for life's challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Build Stronger Parent-Child Bonds</h2>
+                <p>Invest in your relationship with your child. Professional guidance can help you navigate parenting challenges with confidence.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Book Family Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

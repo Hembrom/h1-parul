@@ -1,0 +1,1259 @@
+<div class="contact-page">
+    <!-- Hero Section -->
+    <section class="contact-hero section">
+        <div class="container">
+            <div class="contact-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{pageTitle}}</h1>
+                <p class="hero-subtitle">Ready to take the first step towards positive change? Let's connect.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Form & Info Split Layout -->
+    <section class="section contact-split-section">
+        <div class="container">
+            <div class="split-layout">
+                <!-- Left Side: Form (60%) -->
+                <div class="form-side">
+                    <!-- Tab Navigation -->
+                    <div class="form-tabs" fade-in-on-scroll>
+                        <button class="tab-button active" onclick="switchTab('appointment')" id="appointment-tab">
+                            <span class="tab-icon">📅</span>
+                            <span class="tab-text">Request Appointment</span>
+                        </button>
+                        <button class="tab-button" onclick="switchTab('online')" id="online-tab">
+                            <span class="tab-icon">💻</span>
+                            <span class="tab-text">Online Consultation</span>
+                        </button>
+                    </div>
+
+                    <!-- Appointment Form Tab -->
+                    <div id="appointment-form" class="tab-content active">
+                        <div class="form-intro">
+                            <h2>📅 Request Appointment</h2>
+                            <p>Fill the form below - We'll confirm within 24 hours</p>
+                        </div>
+                    
+                        <form class="contact-form card compact-form" fade-in-on-scroll ng-submit="submitForm()">
+                            <!-- All-in-One Compact Section -->
+                            <div class="compact-form-section">
+                                <!-- Personal Info Row -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="yourName">Name *</label>
+                                        <input type="text" id="yourName" ng-model="contactForm.yourName" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="yourPhone">Phone *</label>
+                                        <input type="tel" id="yourPhone" ng-model="contactForm.yourPhone" placeholder="Your Phone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="yourEmail">Email *</label>
+                                        <input type="email" id="yourEmail" ng-model="contactForm.yourEmail" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="yourCity">City *</label>
+                                        <input type="text" id="yourCity" ng-model="contactForm.yourCity" placeholder="Your City" required>
+                                    </div>
+                                </div>
+
+                                <!-- Appointment For -->
+                                <div class="form-group inline-radio">
+                                    <label>Appointment for: *</label>
+                                    <div class="radio-group-inline">
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="self" ng-model="contactForm.appointmentFor" required>
+                                            <span>Self</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="spouse" ng-model="contactForm.appointmentFor">
+                                            <span>Spouse</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="partner" ng-model="contactForm.appointmentFor">
+                                            <span>Partner</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="child" ng-model="contactForm.appointmentFor">
+                                            <span>Child</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="parent" ng-model="contactForm.appointmentFor">
+                                            <span>Parent</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="family" ng-model="contactForm.appointmentFor">
+                                            <span>Family</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="appointmentFor" value="other" ng-model="contactForm.appointmentFor">
+                                            <span>Other</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Session Type -->
+                                <div class="form-group session-types">
+                                    <label class="session-label">Choose Your Session Type: *</label>
+                                    <div class="session-grid">
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="pre-marital" ng-model="contactForm.sessionType" required>
+                                            <div class="session-content">
+                                                <div class="session-icon">💕</div>
+                                                <span class="session-title">Marriage & Relationship</span>
+                                                <span class="session-desc">Pre-marital & marital counseling</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="emotional-disorders" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">🧠</div>
+                                                <span class="session-title">Emotional Wellness</span>
+                                                <span class="session-desc">Anxiety, stress & depression</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="self-confidence" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">⭐</div>
+                                                <span class="session-title">Self Development</span>
+                                                <span class="session-desc">Confidence & self-esteem</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="separation-divorce" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">💔</div>
+                                                <span class="session-title">Separation Support</span>
+                                                <span class="session-desc">Divorce & child impact issues</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="family-mediation" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">👨‍👩‍👧‍👦</div>
+                                                <span class="session-title">Family Harmony</span>
+                                                <span class="session-desc">Family & joint family mediation</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="parent-child" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">👶</div>
+                                                <span class="session-title">Parent-Child</span>
+                                                <span class="session-desc">Parent-child & teen issues</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="psychological-problems" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">🎭</div>
+                                                <span class="session-title">Psychological Care</span>
+                                                <span class="session-desc">General psychological problems</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card">
+                                            <input type="radio" name="sessionType" value="fears-phobias" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">🛡️</div>
+                                                <span class="session-title">Overcome Fears</span>
+                                                <span class="session-desc">Fears & phobias treatment</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card session-other">
+                                            <input type="radio" name="sessionType" value="other-session" ng-model="contactForm.sessionType">
+                                            <div class="session-content">
+                                                <div class="session-icon">💬</div>
+                                                <span class="session-title">Other Concerns</span>
+                                                <span class="session-desc">Tell us what you need</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Message & Consent -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="additionalMessage">Additional Message</label>
+                                        <textarea id="additionalMessage" ng-model="contactForm.additionalMessage" rows="2" placeholder="Any additional information..."></textarea>
+                                    </div>
+                                    <div class="form-group consent-group">
+                                        <label class="checkbox-label-compact">
+                                            <input type="checkbox" name="privacyConsent" ng-model="contactForm.privacyConsent" required>
+                                            <span>I agree to privacy terms *</span>
+                                        </label>
+                                        <label class="checkbox-label-compact">
+                                            <input type="checkbox" name="contactConsent" ng-model="contactForm.contactConsent">
+                                            <span>OK to contact me</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    📅 Submit Request
+                                </button>
+                                <p class="form-note">
+                                    <em>* Required fields. Confidential & secure.</em>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Online Consultation Form Tab -->
+                    <div id="online-form" class="tab-content">
+                        <div class="form-intro">
+                            <h2>💻 Online Consultation</h2>
+                            <p>Book a secure video session - Perfect for remote counseling</p>
+                        </div>
+                    
+                        <form class="contact-form card compact-form" ng-submit="submitOnlineForm()">
+                            <div class="compact-form-section">
+                                <!-- Personal Info Row -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="onlineName">Name *</label>
+                                        <input type="text" id="onlineName" ng-model="onlineForm.name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="onlinePhone">Phone *</label>
+                                        <input type="tel" id="onlinePhone" ng-model="onlineForm.phone" placeholder="Your Phone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="onlineEmail">Email *</label>
+                                        <input type="email" id="onlineEmail" ng-model="onlineForm.email" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="timezone">Timezone *</label>
+                                        <select id="timezone" ng-model="onlineForm.timezone" required>
+                                            <option value="">Select Timezone</option>
+                                            <option value="IST">India (IST)</option>
+                                            <option value="EST">Eastern Time (EST)</option>
+                                            <option value="PST">Pacific Time (PST)</option>
+                                            <option value="GMT">Greenwich Mean Time (GMT)</option>
+                                            <option value="CET">Central European Time (CET)</option>
+                                            <option value="JST">Japan Time (JST)</option>
+                                            <option value="AEST">Australian Eastern Time (AEST)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Session Purpose -->
+                                <div class="form-group inline-radio">
+                                    <label>Session for: *</label>
+                                    <div class="radio-group-inline">
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="onlineSessionFor" value="self" ng-model="onlineForm.sessionFor" required>
+                                            <span>Self</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="onlineSessionFor" value="couple" ng-model="onlineForm.sessionFor">
+                                            <span>Couple</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="onlineSessionFor" value="family" ng-model="onlineForm.sessionFor">
+                                            <span>Family</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="onlineSessionFor" value="teen" ng-model="onlineForm.sessionFor">
+                                            <span>Teen</span>
+                                        </label>
+                                        <label class="radio-label-inline">
+                                            <input type="radio" name="onlineSessionFor" value="child" ng-model="onlineForm.sessionFor">
+                                            <span>Child</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Consultation Type -->
+                                <div class="form-group session-types">
+                                    <label class="session-label">Consultation Type: *</label>
+                                    <div class="session-grid">
+                                        <label class="session-card online-session">
+                                            <input type="radio" name="consultationType" value="immediate-support" ng-model="onlineForm.consultationType" required>
+                                            <div class="session-content">
+                                                <div class="session-icon">🚨</div>
+                                                <span class="session-title">Immediate Support</span>
+                                                <span class="session-desc">Crisis or urgent emotional support</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card online-session">
+                                            <input type="radio" name="consultationType" value="follow-up" ng-model="onlineForm.consultationType">
+                                            <div class="session-content">
+                                                <div class="session-icon">🔄</div>
+                                                <span class="session-title">Follow-up Session</span>
+                                                <span class="session-desc">Continue ongoing therapy online</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card online-session">
+                                            <input type="radio" name="consultationType" value="initial-consultation" ng-model="onlineForm.consultationType">
+                                            <div class="session-content">
+                                                <div class="session-icon">💡</div>
+                                                <span class="session-title">Initial Consultation</span>
+                                                <span class="session-desc">First-time assessment session</span>
+                                            </div>
+                                        </label>
+                                        <label class="session-card online-session">
+                                            <input type="radio" name="consultationType" value="group-session" ng-model="onlineForm.consultationType">
+                                            <div class="session-content">
+                                                <div class="session-icon">👥</div>
+                                                <span class="session-title">Group Session</span>
+                                                <span class="session-desc">Join a group therapy session</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Preferred Platform & Time -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="platform">Preferred Platform *</label>
+                                        <select id="platform" ng-model="onlineForm.platform" required>
+                                            <option value="">Select Platform</option>
+                                            <option value="zoom">Zoom</option>
+                                            <option value="google-meet">Google Meet</option>
+                                            <option value="skype">Skype</option>
+                                            <option value="whatsapp-video">WhatsApp Video</option>
+                                            <option value="teams">Microsoft Teams</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="preferredTime">Preferred Time *</label>
+                                        <select id="preferredTime" ng-model="onlineForm.preferredTime" required>
+                                            <option value="">Select Time</option>
+                                            <option value="morning">Morning (9 AM - 12 PM)</option>
+                                            <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                            <option value="evening">Evening (5 PM - 8 PM)</option>
+                                            <option value="flexible">Flexible</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Emergency Contact & Message -->
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContact">Emergency Contact</label>
+                                        <input type="tel" id="emergencyContact" ng-model="onlineForm.emergencyContact" placeholder="Emergency contact number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="onlineMessage">Brief Description *</label>
+                                        <textarea id="onlineMessage" ng-model="onlineForm.message" rows="2" placeholder="Briefly describe what you'd like to discuss..." required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Online Specific Consent -->
+                                <div class="form-group consent-group">
+                                    <label class="checkbox-label-compact">
+                                        <input type="checkbox" name="onlinePrivacy" ng-model="onlineForm.privacyConsent" required>
+                                        <span>I agree to online session privacy terms *</span>
+                                    </label>
+                                    <label class="checkbox-label-compact">
+                                        <input type="checkbox" name="techConsent" ng-model="onlineForm.techConsent" required>
+                                        <span>I have stable internet & private space *</span>
+                                    </label>
+                                    <label class="checkbox-label-compact">
+                                        <input type="checkbox" name="recordConsent" ng-model="onlineForm.recordConsent">
+                                        <span>OK to record session for notes (optional)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary online-btn">
+                                    💻 Book Online Session
+                                </button>
+                                <p class="form-note">
+                                    <em>* Session link will be sent via email 1 hour before appointment</em>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                                        <span class="session-desc">Anxiety, stress & depression</span>
+                                    </div>
+                                </label>
+                                <label class="session-card">
+                                    <input type="radio" name="sessionType" value="self-confidence" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">⭐</div>
+                                        <span class="session-title">Self Development</span>
+                                        <span class="session-desc">Confidence & self-esteem</span>
+                                    </div>
+                                </label>
+                                <label class="session-card">
+                                    <input type="radio" name="sessionType" value="separation-divorce" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">💔</div>
+                                        <span class="session-title">Separation Support</span>
+                                        <span class="session-desc">Divorce & child impact issues</span>
+                                    </div>
+                                </label>
+                                <label class="session-card">
+                                    <input type="radio" name="sessionType" value="family-mediation" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">👨‍👩‍👧‍👦</div>
+                                        <span class="session-title">Family Harmony</span>
+                                        <span class="session-desc">Family & joint family mediation</span>
+                                    </div>
+                                </label>
+                                <label class="session-card">
+                                    <input type="radio" name="sessionType" value="parent-child" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">👶</div>
+                                        <span class="session-title">Parent-Child</span>
+                                        <span class="session-desc">Parent-child & teen issues</span>
+                                    </div>
+                                </label>
+                                <label class="session-card">
+                                    <input type="radio" name="sessionType" value="psychological-problems" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">🎭</div>
+                                        <span class="session-title">Psychological Care</span>
+                                        <span class="session-desc">General psychological problems</span>
+                                    </div>
+                                </label>
+                                <label class="session-card">
+                                    <input type="radio" name="sessionType" value="fears-phobias" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">🛡️</div>
+                                        <span class="session-title">Overcome Fears</span>
+                                        <span class="session-desc">Fears & phobias treatment</span>
+                                    </div>
+                                </label>
+                                <label class="session-card session-other">
+                                    <input type="radio" name="sessionType" value="other-session" ng-model="contactForm.sessionType">
+                                    <div class="session-content">
+                                        <div class="session-icon">💬</div>
+                                        <span class="session-title">Other Concerns</span>
+                                        <span class="session-desc">Tell us what you need</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Message & Consent -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="additionalMessage">Additional Message</label>
+                                <textarea id="additionalMessage" ng-model="contactForm.additionalMessage" rows="2" placeholder="Any additional information..."></textarea>
+                            </div>
+                            <div class="form-group consent-group">
+                                <label class="checkbox-label-compact">
+                                    <input type="checkbox" name="privacyConsent" ng-model="contactForm.privacyConsent" required>
+                                    <span>I agree to privacy terms *</span>
+                                </label>
+                                <label class="checkbox-label-compact">
+                                    <input type="checkbox" name="contactConsent" ng-model="contactForm.contactConsent">
+                                    <span>OK to contact me</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            📅 Submit Request
+                        </button>
+                        <p class="form-note">
+                            <em>* Required fields. Confidential & secure.</em>
+                        </p>
+                    </div>
+                </form>
+                </div>
+                
+                <!-- Right Side: Contact Info & Map (40%) -->
+                <div class="info-side">
+                    <!-- Contact Cards -->
+                    <div class="contact-cards" fade-in-on-scroll>
+                        <div class="contact-card">
+                            <div class="contact-icon">📞</div>
+                            <h3>Call Us</h3>
+                            <p><strong><a href="tel:9823075357">98230-75357</a></strong></p>
+                            <p>Mon-Sat: 9 AM - 7 PM</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <h3>Email</h3>
+                            <p><strong><a href="mailto:contact@parulkhona.com">contact@parulkhona.com</a></strong></p>
+                            <p>24/7 inquiry support</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Address -->
+                    <div class="address-section" fade-in-on-scroll>
+                        <h3>📍 Clinic Location</h3>
+                        <div class="address-details">
+                            <p><strong>Parul Khona (M.S.)</strong></p>
+                            <p>Counselling Center</p>
+                            <p>H-7, N Main Rd, opp. Lane No. 6</p>
+                            <p>Liberty Phase 2, Ragvilas Society</p>
+                            <p>Koregaon Park, Pune, Maharashtra 411001</p>
+                            <br>
+                            <p><strong>Direct Link:</strong></p>
+                            <p><a href="https://maps.app.goo.gl/PFCe3eiWrYXFaD6G8" target="_blank" style="color: var(--accent-color); text-decoration: underline;">https://maps.app.goo.gl/PFCe3eiWrYXFaD6G8</a></p>
+                            <br>
+                            <p><strong>Landmarks:</strong></p>
+                            <p>• Opposite Lane No. 6</p>
+                            <p>• Liberty Phase 2, Ragvilas Society</p>
+                            <p>• North Main Road, Koregaon Park</p>
+                        </div>
+                        
+                        <div class="address-actions">
+                            <a href="https://maps.app.goo.gl/PFCe3eiWrYXFaD6G8" target="_blank" class="btn btn-sm btn-primary">
+                                🗺️ Directions
+                            </a>
+                            <a href="tel:9823075357" class="btn btn-sm btn-secondary">
+                                📞 Call
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="map-section" fade-in-on-scroll>
+                        <div class="map-wrapper">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15128.031537654652!2d73.8869654!3d18.5411924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08a4f123456%3A0x789abcdef0123456!2sH-7%2C%20Liberty%20Complex-2%2C%20Opp.%20Pizza%20Hut%2C%20Opp.%20Lane%20No.%206%2C%20North%20Main%20Road%2C%20Koregaon%20Park%2C%20Pune%2C%20Maharashtra%20411001!5e0!3m2!1sen!2sin!4v1734000000000!5m2!1sen!2sin"
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Parul Khona Clinic - H-7, N Main Rd, Liberty Phase 2, Koregaon Park">
+                            </iframe>
+                        </div>
+                        <div class="map-features">
+                            <p>🚗 Parking Available</p>
+                            <p>🚌 Public Transport</p>
+                            <p>♿ Accessible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Support -->
+    <section class="section emergency-section">
+        <div class="container">
+            <div class="emergency-content card" fade-in-on-scroll>
+                <h2>🆘 Need Immediate Help?</h2>
+                <p>If you're experiencing a mental health crisis or having thoughts of self-harm, please reach out for immediate support:</p>
+                <div class="emergency-contacts">
+                    <div class="emergency-item">
+                        <strong>Emergency Services:</strong> <a href="tel:112">112</a>
+                    </div>
+                    <div class="emergency-item">
+                        <strong>Mental Health Helpline:</strong> <a href="tel:9152987821">9152987821</a>
+                    </div>
+                    <div class="emergency-item">
+                        <strong>Crisis Text Line:</strong> Text "HELLO" to <strong>741741</strong>
+                    </div>
+                </div>
+                <p><em>Your safety and wellbeing are the top priority. Don't hesitate to seek immediate help when needed.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links Section -->
+    <section class="section social-media-section">
+        <div class="container">
+            <div class="social-media-content" fade-in-on-scroll>
+                <h2 class="social-title">🌟 Connect With Me</h2>
+                <p class="social-subtitle">Stay updated with mental health tips, insights, and appointment availability</p>
+                
+                <div class="social-links-grid">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/parulkhonacounselling" target="_blank" class="social-link facebook" title="Follow on Facebook">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </div>
+                        <span class="social-text">
+                            <strong>Facebook</strong>
+                            <small>Daily wellness tips & updates</small>
+                        </span>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/parulkhonacounselling" target="_blank" class="social-link instagram" title="Follow on Instagram">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                        <span class="social-text">
+                            <strong>Instagram</strong>
+                            <small>Mental health awareness posts</small>
+                        </span>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/parulkhonacounselling" target="_blank" class="social-link linkedin" title="Connect on LinkedIn">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <span class="social-text">
+                            <strong>LinkedIn</strong>
+                            <small>Professional insights & articles</small>
+                        </span>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@parulkhonacounselling" target="_blank" class="social-link youtube" title="Subscribe on YouTube">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                        <span class="social-text">
+                            <strong>YouTube</strong>
+                            <small>Therapy tips & guidance videos</small>
+                        </span>
+                    </a>
+
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/parulkhonams" target="_blank" class="social-link twitter" title="Follow on Twitter">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </div>
+                        <span class="social-text">
+                            <strong>Twitter</strong>
+                            <small>Quick tips & mental health quotes</small>
+                        </span>
+                    </a>
+
+                    <!-- WhatsApp Community -->
+                    <a href="https://chat.whatsapp.com/parulkhonasupport" target="_blank" class="social-link whatsapp-community" title="Join WhatsApp Community">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+                            </svg>
+                        </div>
+                        <span class="social-text">
+                            <strong>WhatsApp Community</strong>
+                            <small>Mental wellness support group</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="social-footer-note">
+                    <p>🤝 <strong>Join our community</strong> for regular mental health tips, appointment reminders, and supportive discussions with like-minded individuals on their healing journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.contact-page .contact-hero {
+    background: linear-gradient(135deg, 
+        var(--neutral-warm-white) 0%, 
+        rgba(93, 156, 156, 0.1) 50%, 
+        var(--neutral-cream) 100%);
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+}
+
+.contact-hero-content .page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-hero-content .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-card {
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.contact-card a {
+    color: var(--primary-forest);
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.office-hours {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--primary-sage), var(--secondary-teal));
+    color: white;
+}
+
+.contact-form-section {
+    background: var(--neutral-cream);
+}
+
+.contact-form-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-form {
+    padding: var(--spacing-xxl);
+}
+
+.form-section {
+    margin-bottom: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--neutral-soft-gray);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    color: var(--primary-forest);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-sage);
+    display: inline-block;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: var(--spacing-sm);
+    border: 2px solid var(--neutral-soft-gray);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-sage);
+    box-shadow: 0 0 0 3px rgba(156, 175, 136, 0.1);
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.radio-label:hover,
+.checkbox-label:hover {
+    background: rgba(156, 175, 136, 0.1);
+}
+
+.radio-label input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+    transform: scale(1.2);
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+.form-note {
+    margin-top: var(--spacing-md);
+    color: var(--text-medium);
+    font-size: 0.9rem;
+}
+
+/* Contact Split Layout - 60/40 */
+.split-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--spacing-xxl);
+    align-items: start;
+}
+
+.form-side {
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-xl);
+}
+
+.info-side {
+    background: linear-gradient(135deg, var(--primary-sage) 0%, var(--secondary-teal) 100%);
+    border-radius: 15px;
+    padding: var(--spacing-xl);
+    color: white;
+}
+
+/* Contact Cards in Info Side */
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.contact-card .contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.contact-card h3 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.contact-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+}
+
+.contact-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Address Section in Info Side */
+.address-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.address-section h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.address-details {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.address-details p {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-xs);
+}
+
+.address-details strong {
+    color: white;
+}
+
+.address-details a {
+    color: white;
+    text-decoration: underline;
+}
+
+.address-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.address-actions .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Map Section in Info Side */
+.map-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: var(--spacing-md);
+}
+
+.map-features {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+}
+
+.map-features p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Location Section */
+.location-section {
+    background: var(--neutral-warm-white);
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xxl);
+    align-items: start;
+}
+
+.address-card {
+    background: white;
+    padding: var(--spacing-xl);
+}
+
+.address-card h3 {
+    color: var(--primary-forest);
+    margin-bottom: var(--spacing-md);
+}
+
+.address-details {
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.address-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-direction: column;
+}
+
+.map-container {
+    position: relative;
+}
+
+.map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.map-overlay {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-overlay h4 {
+    color: var(--primary-forest);
+    margin-bottom: var(--spacing-sm);
+}
+
+.map-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.map-overlay li {
+    padding: var(--spacing-xs) 0;
+    font-size: 0.9rem;
+}
+
+.service-areas-section {
+    background: var(--neutral-warm-white);
+}
+
+.service-area-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-area-card li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--neutral-soft-gray);
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.service-area-card li:before {
+    content: "•";
+    color: var(--primary-sage);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.faq-section {
+    background: linear-gradient(45deg, var(--neutral-cream), var(--neutral-warm-white));
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-item h3 {
+    color: var(--primary-forest);
+    margin-bottom: var(--spacing-md);
+}
+
+.emergency-section {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.emergency-content {
+    background: white;
+    text-align: center;
+    border: 3px solid #ff6b6b;
+}
+
+.emergency-content h2 {
+    color: #ff6b6b;
+    margin-bottom: var(--spacing-md);
+}
+
+.emergency-contacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.emergency-item {
+    background: #fff5f5;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 8px;
+    border: 1px solid #ff6b6b;
+}
+
+.emergency-item a {
+    color: #ff6b6b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.emergency-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    /* Mobile responsive layout */
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .address-actions {
+        flex-direction: column;
+    }
+
+    .address-actions .btn {
+        flex: none;
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .map-overlay {
+        position: static;
+        margin-top: var(--spacing-md);
+    }
+
+    .emergency-contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .address-actions {
+        flex-direction: column;
+    }
+
+    .radio-group {
+        flex-direction: column;
+    }
+}
+
+/* Form Tabs Styles */
+.form-tabs {
+    display: flex;
+    background: var(--neutral-light-gray);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.tab-button.active {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-primary);
+}
+
+.tab-icon {
+    font-size: 1.1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.online-session {
+    border-left: 4px solid var(--accent-color);
+}
+
+.online-btn {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+}
+
+/* Mobile Tab Styles */
+@media (max-width: 768px) {
+    .form-tabs {
+        padding: 3px;
+    }
+    
+    .tab-button {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .tab-text {
+        display: none;
+    }
+    
+    .tab-icon {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+<script>
+function switchTab(tabName) {
+    // Remove active class from all tabs and content
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    
+    // Add active class to clicked tab and corresponding content
+    document.getElementById(tabName + '-tab').classList.add('active');
+    document.getElementById(tabName + '-form').classList.add('active');
+}
+</script>

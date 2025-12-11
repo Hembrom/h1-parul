@@ -1,0 +1,245 @@
+<div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content" fade-in-on-scroll>
+            <h1 type-writer="{{heroTitle}}" type-speed="50"></h1>
+            <p class="subtitle">{{heroSubtitle}}</p>
+            <div class="hero-actions">
+                <a href="#!/contact" class="btn btn-primary">Request an Appointment</a>
+                <a href="#!/about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about-preview" fade-in-on-scroll>
+                <h2 class="section-title">I am a Psychologist-Therapist and Counsellor in Pune, my mission is to:</h2>
+                <div class="mission-grid grid grid-3">
+                    <div class="mission-item card" hover-effect="lift">
+                        <div class="mission-icon">🌱</div>
+                        <h3>Emotional Wellbeing</h3>
+                        <p>Provide insight and guidance towards improving your emotional well being.</p>
+                    </div>
+                    <div class="mission-item card" hover-effect="lift">
+                        <div class="mission-icon">💪</div>
+                        <h3>Enhance Abilities</h3>
+                        <p>Help you to gauge and enhance your abilities, be it in professional, social and interpersonal situations.</p>
+                    </div>
+                    <div class="mission-item card" hover-effect="lift">
+                        <div class="mission-icon">🛠️</div>
+                        <h3>Problem Solving</h3>
+                        <p>Guide you to empower yourself with problem solving tools which will help in improving your lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="section about-preview-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image" fade-in-on-scroll>
+                    <img src="assets/images/parul-madam.png?v=2025" 
+                         alt="Parul Khona - Professional Counsellor" 
+                         class="floating">
+                </div>
+                <div class="about-text" fade-in-on-scroll>
+                    <h2>{{aboutPreview.title}}</h2>
+                    <p class="qualification">{{aboutPreview.qualifications}}</p>
+                    <p>{{aboutPreview.content}}</p>
+                    <p class="highlight">The strength of the mind is one of the most powerful gifts that people have. And keeping your mind positive and strong is not always easy.</p>
+                    <div class="about-actions">
+                        <a href="#!/about" class="btn btn-primary">Learn More About Me</a>
+                        <a href="#!/contact" class="btn btn-secondary">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>My Areas of Specialty</h2>
+            <p class="section-subtitle" fade-in-on-scroll>Professional counselling services to help you overcome challenges and improve your quality of life</p>
+            
+            <div class="services-grid grid grid-2">
+                <div class="service-card card" 
+                     ng-repeat="service in services" 
+                     fade-in-on-scroll
+                     hover-effect="lift">
+                    <div class="service-icon">{{service.icon}}</div>
+                    <h3>{{service.title}}</h3>
+                    <p>{{service.description}}</p>
+                    <a ng-href="{{service.link}}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Services Section -->
+    <section class="section corporate-section">
+        <div class="container">
+            <div class="corporate-content" fade-in-on-scroll>
+                <h2 class="section-title">Corporate Counselling</h2>
+                <p class="section-subtitle">Helping organizations create healthier, more productive workplaces</p>
+                
+                <div class="corporate-services grid grid-2">
+                    <div class="corporate-item card">
+                        <h3>Workplace Harmony</h3>
+                        <ul>
+                            <li>Managing Interpersonal Conflict at work</li>
+                            <li>Learning to manage Work related Stress</li>
+                            <li>Learning to help each other at work (Team Spirit)</li>
+                        </ul>
+                    </div>
+                    <div class="corporate-item card">
+                        <h3>Employee Development</h3>
+                        <ul>
+                            <li>Improving Interpersonal communication ability</li>
+                            <li>Inspiring and Motivating individuals to deliver their best</li>
+                            <li>Employee Assistance Program for personal issues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Ready to Take the First Step?</h2>
+                <p>Your journey towards positive change starts with a single step. Let's work together to improve your mental wellbeing and quality of life.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">
+                        📞 Call: 98230-75357
+                    </a>
+                    <a href="#!/contact" class="btn btn-secondary">Request Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.home-page .hero {
+    background: linear-gradient(135deg, 
+        var(--neutral-warm-white) 0%, 
+        rgba(156, 175, 136, 0.1) 50%, 
+        var(--neutral-cream) 100%);
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+.mission-grid .mission-item {
+    text-align: center;
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.qualification {
+    font-weight: 600;
+    color: var(--primary-forest);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
+.highlight {
+    background: linear-gradient(120deg, rgba(156, 175, 136, 0.1) 0%, transparent 100%);
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--primary-sage);
+    border-radius: 4px;
+    font-style: italic;
+    margin: var(--spacing-md) 0;
+}
+
+.service-card {
+    text-align: center;
+    position: relative;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.corporate-section {
+    background: linear-gradient(45deg, var(--neutral-cream), var(--neutral-warm-white));
+}
+
+.corporate-services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.corporate-services li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--neutral-soft-gray);
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.corporate-services li:before {
+    content: "✓";
+    color: var(--primary-sage);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-forest), var(--secondary-ocean));
+    color: white;
+}
+
+.cta-section .section-title,
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+.about-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .hero-actions,
+    .cta-actions,
+    .about-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-actions .btn,
+    .cta-actions .btn,
+    .about-actions .btn {
+        width: 200px;
+        text-align: center;
+    }
+}
+</style>

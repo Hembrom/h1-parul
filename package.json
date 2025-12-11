@@ -1,0 +1,22 @@
+{
+  "name": "healing-therapy-website",
+  "version": "1.0.0",
+  "description": "A healing-themed therapy website built with AngularJS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o",
+    "build": "echo 'Build complete'",
+    "start": "npx http-server -p 3000"
+  },
+  "keywords": ["angularjs", "therapy", "healing", "counselling"],
+  "author": "Healing Therapy",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-route": "^1.8.3",
+    "angular-animate": "^1.8.3"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

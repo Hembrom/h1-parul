@@ -1,0 +1,174 @@
+<div class="service-page emotional-disorders">
+    <!-- Hero Section -->
+    <section class="service-hero section">
+        <div class="container">
+            <div class="service-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{serviceData.title}}</h1>
+                <p class="hero-subtitle">{{serviceData.hero}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="service-main-content">
+                <div class="service-image" fade-in-on-scroll>
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Mental Health and Emotional Wellbeing" 
+                         class="floating">
+                </div>
+                <div class="service-text" fade-in-on-scroll>
+                    <h2>Understanding Emotional Disorders</h2>
+                    <p class="service-description">{{serviceData.description}}</p>
+                    <div class="service-content">
+                        <p ng-repeat="paragraph in serviceData.content">{{paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional Disorders Types -->
+    <section class="section disorders-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Common Emotional Challenges</h2>
+            <div class="disorders-grid grid grid-2">
+                <div class="disorder-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="disorder-icon">🌪️</div>
+                    <h3>Anxiety Disorders</h3>
+                    <p>Generalized anxiety, panic attacks, social anxiety, and specific phobias that interfere with daily functioning.</p>
+                    <ul>
+                        <li>Excessive worry and fear</li>
+                        <li>Physical symptoms (racing heart, sweating)</li>
+                        <li>Avoidance behaviors</li>
+                        <li>Sleep disturbances</li>
+                    </ul>
+                </div>
+                <div class="disorder-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="disorder-icon">🌧️</div>
+                    <h3>Depression</h3>
+                    <p>Persistent sadness, hopelessness, and loss of interest in activities that once brought joy.</p>
+                    <ul>
+                        <li>Persistent low mood</li>
+                        <li>Loss of energy and motivation</li>
+                        <li>Changes in appetite and sleep</li>
+                        <li>Difficulty concentrating</li>
+                    </ul>
+                </div>
+                <div class="disorder-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="disorder-icon">🔥</div>
+                    <h3>Anger Management</h3>
+                    <p>Difficulty controlling anger responses that affect relationships and daily life.</p>
+                    <ul>
+                        <li>Explosive outbursts</li>
+                        <li>Difficulty controlling temper</li>
+                        <li>Regret after angry episodes</li>
+                        <li>Impact on relationships</li>
+                    </ul>
+                </div>
+                <div class="disorder-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="disorder-icon">⚡</div>
+                    <h3>Chronic Stress</h3>
+                    <p>Ongoing stress from work, relationships, or life circumstances that affects mental and physical health.</p>
+                    <ul>
+                        <li>Feeling overwhelmed</li>
+                        <li>Physical tension and fatigue</li>
+                        <li>Difficulty relaxing</li>
+                        <li>Health problems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Approaches -->
+    <section class="section treatment-approaches-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Treatment Approaches</h2>
+            <div class="approaches-grid">
+                <div class="approach-item" fade-in-on-scroll>
+                    <div class="approach-step">1</div>
+                    <div class="approach-content">
+                        <h3>Assessment & Diagnosis</h3>
+                        <p>Comprehensive evaluation to understand your specific emotional challenges and their underlying causes.</p>
+                    </div>
+                </div>
+                <div class="approach-item" fade-in-on-scroll>
+                    <div class="approach-step">2</div>
+                    <div class="approach-content">
+                        <h3>Cognitive Behavioral Therapy</h3>
+                        <p>Identifying and changing negative thought patterns that contribute to emotional distress.</p>
+                    </div>
+                </div>
+                <div class="approach-item" fade-in-on-scroll>
+                    <div class="approach-step">3</div>
+                    <div class="approach-content">
+                        <h3>Coping Strategies</h3>
+                        <p>Learning practical tools and techniques to manage emotions and stress effectively.</p>
+                    </div>
+                </div>
+                <div class="approach-item" fade-in-on-scroll>
+                    <div class="approach-step">4</div>
+                    <div class="approach-content">
+                        <h3>Lifestyle Integration</h3>
+                        <p>Developing healthy habits and routines that support long-term emotional wellbeing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self-Care Tips -->
+    <section class="section self-care-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Self-Care Strategies</h2>
+            <div class="self-care-tips grid grid-3">
+                <div class="tip-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="tip-icon">🧘‍♀️</div>
+                    <h3>Mindfulness & Meditation</h3>
+                    <p>Practice present-moment awareness to reduce anxiety and improve emotional regulation.</p>
+                </div>
+                <div class="tip-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="tip-icon">🏃‍♀️</div>
+                    <h3>Physical Exercise</h3>
+                    <p>Regular physical activity to boost mood, reduce stress, and improve overall mental health.</p>
+                </div>
+                <div class="tip-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="tip-icon">📝</div>
+                    <h3>Journaling</h3>
+                    <p>Writing to process emotions, track patterns, and gain insights into your mental state.</p>
+                </div>
+                <div class="tip-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="tip-icon">🌱</div>
+                    <h3>Healthy Boundaries</h3>
+                    <p>Learning to say no and protect your emotional energy from draining situations.</p>
+                </div>
+                <div class="tip-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="tip-icon">👥</div>
+                    <h3>Social Support</h3>
+                    <p>Building and maintaining supportive relationships that provide emotional nourishment.</p>
+                </div>
+                <div class="tip-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="tip-icon">🌙</div>
+                    <h3>Sleep Hygiene</h3>
+                    <p>Establishing healthy sleep patterns to support emotional stability and mental clarity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Take Control of Your Emotional Health</h2>
+                <p>You don't have to struggle alone. Professional support can help you develop the skills to manage emotions and live a more balanced life.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Start Your Healing Journey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

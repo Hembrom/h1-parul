@@ -1,0 +1,321 @@
+<div class="service-page marriage-counselling">
+    <!-- Hero Section -->
+    <section class="service-hero section">
+        <div class="container">
+            <div class="service-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{serviceData.title}}</h1>
+                <p class="hero-subtitle">{{serviceData.hero}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="service-main-content">
+                <div class="service-image" fade-in-on-scroll>
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae4800e0ec52?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Marriage Counselling" 
+                         class="floating">
+                </div>
+                <div class="service-text" fade-in-on-scroll>
+                    <h2>Understanding Marriage Counselling</h2>
+                    <p class="service-description">{{serviceData.description}}</p>
+                    <div class="service-content">
+                        <p ng-repeat="paragraph in serviceData.content">{{paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>How Marriage Counselling Helps</h2>
+            <div class="benefits-grid grid grid-2">
+                <div class="benefit-card card" 
+                     ng-repeat="benefit in serviceData.benefits" 
+                     fade-in-on-scroll
+                     hover-effect="lift">
+                    <div class="benefit-icon">✓</div>
+                    <h3>{{benefit}}</h3>
+                    <p>Professional guidance to strengthen your relationship and overcome challenges together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>The Counselling Process</h2>
+            <div class="process-steps">
+                <div class="step-item" fade-in-on-scroll>
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Assessment</h3>
+                        <p>Understanding your relationship dynamics, challenges, and goals through comprehensive evaluation.</p>
+                    </div>
+                </div>
+                <div class="step-item" fade-in-on-scroll>
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Personalized Plan</h3>
+                        <p>Developing a tailored approach that addresses your specific needs and relationship patterns.</p>
+                    </div>
+                </div>
+                <div class="step-item" fade-in-on-scroll>
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Active Sessions</h3>
+                        <p>Regular counselling sessions with proven techniques to improve communication and understanding.</p>
+                    </div>
+                </div>
+                <div class="step-item" fade-in-on-scroll>
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Ongoing Support</h3>
+                        <p>Continued guidance and tools to maintain a healthy, thriving relationship long-term.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Issues Section -->
+    <section class="section issues-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Common Issues We Address</h2>
+            <div class="issues-grid grid grid-3">
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">💬</div>
+                    <h3>Communication Problems</h3>
+                    <p>Learning effective communication techniques to express needs and resolve conflicts constructively.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">⚖️</div>
+                    <h3>Trust Issues</h3>
+                    <p>Rebuilding trust and intimacy through guided exercises and open, honest communication.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">🔄</div>
+                    <h3>Recurring Conflicts</h3>
+                    <p>Breaking negative patterns and developing healthier ways to handle disagreements.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">💕</div>
+                    <h3>Intimacy Concerns</h3>
+                    <p>Addressing emotional and physical intimacy issues to strengthen your bond.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Dynamics</h3>
+                    <p>Navigating extended family relationships and parenting challenges together.</p>
+                </div>
+                <div class="issue-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="issue-icon">🌱</div>
+                    <h3>Life Transitions</h3>
+                    <p>Supporting couples through major life changes and transitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Ready to Strengthen Your Relationship?</h2>
+                <p>Take the first step towards a healthier, happier relationship. Professional guidance can make all the difference.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.service-page .service-hero {
+    background: linear-gradient(135deg, 
+        var(--neutral-warm-white) 0%, 
+        rgba(244, 181, 160, 0.1) 50%, 
+        var(--neutral-cream) 100%);
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+}
+
+.service-hero-content .page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-hero-content .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.service-description {
+    font-size: 1.1rem;
+    color: var(--primary-forest);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+.service-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.benefits-section {
+    background: linear-gradient(45deg, var(--neutral-cream), var(--neutral-warm-white));
+}
+
+.benefit-card {
+    text-align: center;
+    position: relative;
+    padding-top: var(--spacing-xl);
+}
+
+.benefit-icon {
+    position: absolute;
+    top: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-sage);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.process-section {
+    background: var(--neutral-warm-white);
+}
+
+.process-steps {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.step-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 60px;
+    width: 2px;
+    height: 60px;
+    background: var(--neutral-soft-gray);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-sage), var(--primary-forest));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+    padding-top: var(--spacing-xs);
+}
+
+.issues-section {
+    background: linear-gradient(135deg, 
+        rgba(156, 175, 136, 0.05) 0%, 
+        var(--neutral-warm-white) 50%, 
+        rgba(93, 156, 156, 0.05) 100%);
+}
+
+.issue-card {
+    text-align: center;
+}
+
+.issue-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--accent-peach), var(--primary-sage));
+    color: white;
+}
+
+.cta-section .section-title,
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .service-main-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .step-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .step-item:not(:last-child):after {
+        display: none;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-actions .btn {
+        width: 250px;
+        text-align: center;
+    }
+}
+</style>

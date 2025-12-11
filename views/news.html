@@ -1,0 +1,151 @@
+<div class="news-page">
+    <!-- Hero Section -->
+    <section class="news-hero section">
+        <div class="container">
+            <div class="news-hero-content" fade-in-on-scroll>
+                <h1 class="page-title">{{pageTitle}}</h1>
+                <p class="hero-subtitle">Media coverage and expert insights on mental health and wellbeing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="section featured-news-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Featured Coverage</h2>
+            <div class="featured-news-grid">
+                <div class="featured-article card" fade-in-on-scroll hover-effect="lift">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Mental Health Awareness" class="floating">
+                    </div>
+                    <div class="article-content">
+                        <h3>Breaking the Stigma: Mental Health in Modern Society</h3>
+                        <p class="article-meta">
+                            <span class="publication">India Today</span>
+                            <span class="date">March 12, 2025</span>
+                        </p>
+                        <p>Expert insights on the importance of mental health awareness and breaking down social stigmas that prevent people from seeking help.</p>
+                        <div class="article-tags">
+                            <span class="tag">Mental Health</span>
+                            <span class="tag">Awareness</span>
+                            <span class="tag">Social Change</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="section news-grid-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Recent Media Appearances</h2>
+            <div class="news-grid">
+                <div class="news-item card" 
+                     ng-repeat="item in newsItems" 
+                     fade-in-on-scroll
+                     hover-effect="lift">
+                    <div class="news-image">
+                        <img ng-src="{{item.image || 'https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}}" 
+                             alt="{{item.title}}">
+                        <div class="news-overlay">
+                            <span class="news-type">{{item.publication}}</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>{{item.title}}</h3>
+                        <p class="news-meta">
+                            <span class="publication">{{item.publication}}</span>
+                            <span class="date">{{item.date}}</span>
+                        </p>
+                        <p class="news-description">{{item.description}}</p>
+                        <div class="news-topics">
+                            <span class="topic" ng-repeat="topic in getTopicsForNews($index)">{{topic}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Topics -->
+    <section class="section expert-topics-section">
+        <div class="container">
+            <h2 class="section-title" fade-in-on-scroll>Areas of Expertise Covered</h2>
+            <div class="topics-grid grid grid-3">
+                <div class="topic-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="topic-icon">💑</div>
+                    <h3>Relationship Counselling</h3>
+                    <p>Expert commentary on marriage, relationships, and family dynamics in modern society.</p>
+                </div>
+                <div class="topic-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="topic-icon">🧠</div>
+                    <h3>Mental Health Awareness</h3>
+                    <p>Insights on reducing stigma and promoting mental health awareness in communities.</p>
+                </div>
+                <div class="topic-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="topic-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Therapy</h3>
+                    <p>Expert advice on resolving family conflicts and building stronger family bonds.</p>
+                </div>
+                <div class="topic-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="topic-icon">💼</div>
+                    <h3>Workplace Mental Health</h3>
+                    <p>Professional insights on managing work stress and creating healthier work environments.</p>
+                </div>
+                <div class="topic-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="topic-icon">🌟</div>
+                    <h3>Personal Development</h3>
+                    <p>Guidance on self-improvement, confidence building, and achieving personal goals.</p>
+                </div>
+                <div class="topic-card card" fade-in-on-scroll hover-effect="lift">
+                    <div class="topic-icon">🧘‍♀️</div>
+                    <h3>Stress Management</h3>
+                    <p>Expert techniques for managing stress, anxiety, and emotional challenges effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Contact -->
+    <section class="section media-contact-section">
+        <div class="container">
+            <div class="media-contact-content" fade-in-on-scroll>
+                <h2 class="section-title">Media Inquiries</h2>
+                <p>For interviews, expert commentary, or media collaborations, please get in touch.</p>
+                <div class="media-info">
+                    <div class="media-item">
+                        <h3>🎤 Available for:</h3>
+                        <ul>
+                            <li>Expert interviews and commentary</li>
+                            <li>Panel discussions on mental health</li>
+                            <li>Workshop and seminar presentations</li>
+                            <li>Written articles and blog contributions</li>
+                        </ul>
+                    </div>
+                    <div class="media-item">
+                        <h3>📞 Contact Information:</h3>
+                        <p><strong>Phone:</strong> <a href="tel:9823075357">98230-75357</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:media@parulkhona.com">media@parulkhona.com</a></p>
+                        <p><strong>Response Time:</strong> Within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" fade-in-on-scroll>
+                <h2>Ready to Share Your Story?</h2>
+                <p>If you're a media professional looking for expert insights on mental health topics, let's collaborate.</p>
+                <div class="cta-actions">
+                    <a href="tel:9823075357" class="btn btn-primary">📞 Call: 98230-75357</a>
+                    <a href="#!/contact" class="btn btn-secondary">Send Media Request</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
