@@ -1,0 +1,89 @@
+/* T2 - LIGHT PINK/PEACH HEALING THEME */
+/* Date: December 12, 2025 */
+/* Harmony, Peace & Healing with Pink/Peach Tones */
+
+:root {
+  /* Healing Color Palette - T2 */
+  --primary-sage: #E8C5C5;        /* Soft rose */
+  --primary-forest: #D4A5A5;       /* Warm rose */
+  --secondary-teal: #C5D4E8;       /* Soft periwinkle */
+  --secondary-ocean: #A5B8D4;      /* Calm blue */
+  --accent-lavender: #E0D4E8;      /* Gentle lavender */
+  --accent-peach: #F5D5C5;         /* Light peach */
+  --neutral-cream: #FDF9F7;        /* Warm cream */
+  --neutral-warm-white: #FEFCFA;   /* Pure warm white */
+  --neutral-soft-gray: #F0EBE8;    /* Soft warm gray */
+  --neutral-charcoal: #6B5B5B;     /* Warm charcoal */
+  --text-dark: #5A4545;            /* Warm dark text */
+  --text-medium: #8A7575;          /* Warm medium text */
+  --text-light: #B5A5A5;           /* Warm light text */
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Component Colors for T2 */
+
+/* Contact Bar */
+.contact-bar {
+    background: linear-gradient(135deg, #E8C5C5 0%, #D4A5A5 100%);
+}
+
+/* Social Media Section */
+.social-media-section {
+    background: linear-gradient(135deg, #E8C5C5 0%, #D4A5A5 100%);
+}
+
+/* Checkboxes */
+.checkbox-custom {
+    border: 2px solid #E8C5C5;
+}
+.consent-checkbox input:checked + .checkbox-custom {
+    background: rgba(232, 197, 197, 0.8);
+    border-color: #E8C5C5;
+}
+
+/* Textarea */
+.message-group textarea {
+    border: 2px solid #E8C5C5;
+}
+.message-group textarea:focus {
+    border-color: #D4A5A5;
+    box-shadow: 0 0 0 3px rgba(232, 197, 197, 0.3);
+}
+
+/* Contact Cards */
+.contact-split-section .phone-card {
+    border-left-color: rgba(232, 197, 197, 0.8);
+}
+.contact-split-section .email-card {
+    border-left-color: rgba(197, 212, 232, 0.8);
+}
+.contact-split-section .phone-card:hover {
+    border-left-color: #E8C5C5;
+}
+.contact-split-section .email-card:hover {
+    border-left-color: #C5D4E8;
+}
+
+/* Privacy Links */
+.privacy-link {
+    color: #D4A5A5;
+}
+.privacy-link:hover {
+    color: #E8C5C5;
+}

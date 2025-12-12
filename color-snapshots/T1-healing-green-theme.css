@@ -1,0 +1,89 @@
+/* T1 - HEALING GREEN THEME SNAPSHOT */
+/* Date: December 12, 2025 */
+/* This is the current green healing theme backup */
+
+:root {
+  /* Healing Color Palette - T1 */
+  --primary-sage: #B5C9A4;
+  --primary-forest: #8FA67B;
+  --secondary-teal: #7DB5B5;
+  --secondary-ocean: #6A9A9A;
+  --accent-lavender: #C8B9D9;
+  --accent-peach: #F6C5B0;
+  --neutral-cream: #F9F7F5;
+  --neutral-warm-white: #FEFCFA;
+  --neutral-soft-gray: #EAE8E5;
+  --neutral-charcoal: #4A4A4A;
+  --text-dark: #3C3C3C;
+  --text-medium: #6A6A6A;
+  --text-light: #9A9A9A;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Key Component Colors for T1 Restoration */
+
+/* Contact Bar */
+.contact-bar {
+    background: linear-gradient(135deg, #B5C9A4 0%, #8FA67B 100%);
+}
+
+/* Social Media Section */
+.social-media-section {
+    background: linear-gradient(135deg, #B5C9A4 0%, #8FA67B 100%);
+}
+
+/* Checkboxes */
+.checkbox-custom {
+    border: 2px solid #B5C9A4;
+}
+.consent-checkbox input:checked + .checkbox-custom {
+    background: rgba(181, 201, 164, 0.8);
+    border-color: #B5C9A4;
+}
+
+/* Textarea */
+.message-group textarea {
+    border: 2px solid #B5C9A4;
+}
+.message-group textarea:focus {
+    border-color: #8FA67B;
+    box-shadow: 0 0 0 3px rgba(181, 201, 164, 0.3);
+}
+
+/* Contact Cards */
+.contact-split-section .phone-card {
+    border-left-color: rgba(181, 201, 164, 0.8);
+}
+.contact-split-section .email-card {
+    border-left-color: rgba(125, 181, 181, 0.8);
+}
+.contact-split-section .phone-card:hover {
+    border-left-color: #B5C9A4;
+}
+.contact-split-section .email-card:hover {
+    border-left-color: #7DB5B5;
+}
+
+/* Privacy Links */
+.privacy-link {
+    color: #8FA67B;
+}
+.privacy-link:hover {
+    color: #B5C9A4;
+}
